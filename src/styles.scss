@@ -17,10 +17,6 @@ body {
 
 // Text
 
-.app-font {
-  font-family: "Blinker", sans-serif;
-}
-
 h1,
 h2,
 h3,
@@ -29,7 +25,8 @@ label,
 span {
   margin: 0;
   padding: 0;
-  @extend .app-font;
+  font-family: "Blinker", sans-serif;
+  color: #000000;
 }
 
 .paragraph-lighter,

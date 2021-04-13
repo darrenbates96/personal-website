@@ -11,6 +11,14 @@
   border-radius: 16px;
 }
 
+.scroll-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 4px auto;
+  background-color: #000000;
+}
+
 .paragraph-lighter {
   display: inline-block;
 }

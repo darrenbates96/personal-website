@@ -1,0 +1,15 @@
+@import "src/styles.scss";
+@import "src/variables.scss";
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $app-background;
+}
+
+.background-text-container {
+  position: absolute;
+  top: 2.5%;
+  width: 100%;
+}

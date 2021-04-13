@@ -1,6 +1,11 @@
 @import "src/variables";
 
-// Global Dimensions
+// Font Import
+
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+// Dimensions
 
 html,
 body {
@@ -10,15 +15,57 @@ body {
   padding: 0;
 }
 
+// Text
+
+.App-Font {
+  font-family: "Blinker", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+label,
+span {
+  margin: 0;
+  padding: 0;
+  @extend .App-Font;
+}
+
+.Paragraph-Lighter,
+.Paragraph,
+.Paragraph-Bolder {
+  font-size: 16px;
+}
+.Paragraph-Lighter {
+  font-weight: 400;
+}
+.Paragraph {
+  font-weight: 500;
+}
+.Paragraph-Bolder {
+  font-weight: 600;
+}
+
+.Background-Text {
+  font-family: "Staatliches", cursive;
+  font-size: 240px;
+  line-height: 190px;
+  letter-spacing: 40px;
+  text-align: center;
+  color: $app-background;
+  text-shadow: 0 0 50px $background-text;
+}
+
 // Layout
 
-.flex {
+.Flex {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 
-.flex-column {
+.Flex-Column {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -27,25 +74,25 @@ body {
   flex-direction: column;
 }
 
-.justify-center {
+.Justify-Center {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.justify-end {
+.Justify-End {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
-.align-center {
+.Align-Center {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.align-end {
+.Align-End {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;

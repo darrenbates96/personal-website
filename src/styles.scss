@@ -1,5 +1,9 @@
 @import "src/variables";
 
+// Font Import
+
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600&display=swap");
+
 // Dimensions
 
 html,
@@ -12,6 +16,10 @@ body {
 
 // Text
 
+.App-Font {
+  font-family: "Blinker", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -20,6 +28,22 @@ label,
 span {
   margin: 0;
   padding: 0;
+  @extend .App-Font;
+}
+
+.Paragraph-Lighter,
+.Paragraph,
+.Paragraph-Bolder {
+  font-size: 16px;
+}
+.Paragraph-Lighter {
+  font-weight: 400;
+}
+.Paragraph {
+  font-weight: 500;
+}
+.Paragraph-Bolder {
+  font-weight: 600;
 }
 
 // Layout

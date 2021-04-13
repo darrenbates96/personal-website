@@ -1,0 +1,60 @@
+.scroll-container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.scroll-icon {
+  width: 14px;
+  height: 25px;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 16px;
+}
+
+.scroll-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 4px auto;
+  background-color: #000000;
+  animation: dropFade 7s infinite;
+}
+
+.paragraph-lighter {
+  display: inline-block;
+  animation: textFade 7s infinite;
+}
+
+// Animations
+
+@keyframes dropFade {
+  0% {
+    margin: 4px auto;
+  }
+  4% {
+    opacity: 1;
+    margin: 2px auto;
+  }
+  10% {
+    opacity: 0;
+    margin: 8px auto;
+  }
+  11% {
+    margin: 4px auto;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFade {
+  4% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}

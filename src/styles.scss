@@ -49,12 +49,12 @@ span {
 
 .Background-Text {
   font-family: "Staatliches", cursive;
-  font-size: 260px;
-  line-height: 200px;
+  font-size: 240px;
+  line-height: 190px;
   letter-spacing: 40px;
   text-align: center;
   color: $app-background;
-  text-shadow: 0 0 50px #ededed;
+  text-shadow: 0 0 50px $background-text;
 }
 
 // Layout

@@ -12,13 +12,13 @@ body {
 
 // Layout
 
-.flex {
+.Flex {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 
-.flex-column {
+.Flex-Column {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -27,25 +27,25 @@ body {
   flex-direction: column;
 }
 
-.justify-center {
+.Justify-Center {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.justify-end {
+.Justify-End {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
-.align-center {
+.Align-Center {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.align-end {
+.Align-End {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;

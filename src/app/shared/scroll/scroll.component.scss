@@ -22,6 +22,7 @@
 
 .paragraph-lighter {
   display: inline-block;
+  animation: textFade 7s infinite;
 }
 
 // Animations
@@ -40,6 +41,18 @@
   }
   11% {
     margin: 4px auto;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+@keyframes textFade {
+  4% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
   }
   20% {
     opacity: 1;

@@ -26,22 +26,19 @@ span {
   margin: 0;
   padding: 0;
   font-family: "Blinker", sans-serif;
+  font-weight: 500;
   color: #000000;
 }
 
-.paragraph-lighter,
-.paragraph,
-.paragraph-bolder {
-  font-size: 16px;
-}
-.paragraph-lighter {
+.font-lighter {
   font-weight: 400;
 }
-.paragraph {
-  font-weight: 500;
-}
-.paragraph-bolder {
+.font-bolder {
   font-weight: 600;
+}
+
+.paragraph {
+  font-size: 16px;
 }
 
 .background-text {

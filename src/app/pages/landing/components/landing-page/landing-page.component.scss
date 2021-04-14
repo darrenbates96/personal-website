@@ -23,3 +23,18 @@
   @extend .justify-center;
   @extend .align-center;
 }
+
+.landing-header {
+  font-size: 80px;
+  @extend .font-bolder;
+}
+
+.landing-emoji {
+  font-size: 60px;
+}
+
+.landing-scroll-container {
+  position: absolute;
+  left: calc(50% - 17.5px);
+  bottom: 24px;
+}

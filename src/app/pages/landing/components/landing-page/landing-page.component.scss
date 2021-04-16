@@ -10,7 +10,11 @@
 
 .landing-background-text-container {
   width: 100%;
-  padding-top: 24px;
+  height: 100%;
+  @extend .flex-column;
+  @extend .justify-center;
+  @extend .align-center;
+  overflow: hidden;
 }
 
 .landing-content {

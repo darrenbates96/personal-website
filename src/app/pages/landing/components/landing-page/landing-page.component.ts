@@ -17,8 +17,6 @@ export class LandingPageComponent implements OnInit {
     this.text = landingPageText;
   }
 
-  performTextAnimation() {}
-
   performAnimateEmoji() {
     this.animateEmoji = true;
     setTimeout(() => {

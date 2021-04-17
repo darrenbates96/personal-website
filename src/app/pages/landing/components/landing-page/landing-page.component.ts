@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { landingPageText } from 'src/app/core/constants';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent implements OnInit {
+  text: string[] = [];
+
   animateEmoji: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.text = landingPageText;
+  }
 
   performAnimateEmoji() {
     this.animateEmoji = true;

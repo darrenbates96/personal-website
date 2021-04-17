@@ -27,6 +27,11 @@
 .landing-header {
   font-size: 80px;
   @extend .font-bolder;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.landing-header:hover {
+  transform: skewX(-15deg);
 }
 
 .landing-emoji {

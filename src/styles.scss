@@ -91,3 +91,17 @@ span {
   -ms-flex-align: end;
   align-items: flex-end;
 }
+
+// Predefined Layouts
+
+.center-row-contents {
+  @extend .flex;
+  @extend .justify-center;
+  @extend .align-center;
+}
+
+.center-column-contents {
+  @extend .flex-column;
+  @extend .justify-center;
+  @extend .align-center;
+}

@@ -11,9 +11,7 @@
 .landing-background-text-container {
   width: 100%;
   height: 100%;
-  @extend .flex-column;
-  @extend .justify-center;
-  @extend .align-center;
+  @extend .center-column-contents;
   overflow: hidden;
 }
 
@@ -23,9 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  @extend .flex-column;
-  @extend .justify-center;
-  @extend .align-center;
+  @extend .center-column-contents;
 }
 
 .landing-header {

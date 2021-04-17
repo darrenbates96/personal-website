@@ -8,9 +8,15 @@
 
   <!-- Content -->
   <div class="landing-content">
-    <h1 class="landing-header">
-      Hi,<br />I'm a software engineer...<br />Let's bring your ideas to life!
-    </h1>
+    <div>
+      <h1 *ngFor="let line of text" class="landing-header">
+        <span
+          *ngFor="let letter of line.split('')"
+          (mouseover)="performTextAnimation()"
+          >{{ letter }}</span
+        >
+      </h1>
+    </div>
     <h1
       class="landing-emoji"
       [class.landing-emoji-animate]="animateEmoji"

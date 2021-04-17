@@ -9,12 +9,14 @@ import { landingPageText } from 'src/app/core/constants';
 export class LandingPageComponent implements OnInit {
   text: string[] = [];
 
+  isPageLoading: boolean = true;
   animateEmoji: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {
     this.text = landingPageText;
+    this.animatePageHelper();
   }
 
   performAnimateEmoji() {
@@ -22,5 +24,11 @@ export class LandingPageComponent implements OnInit {
     setTimeout(() => {
       this.animateEmoji = false;
     }, 800);
+  }
+
+  animatePageHelper() {
+    setTimeout(() => {
+      this.isPageLoading = false;
+    }, 1000);
   }
 }

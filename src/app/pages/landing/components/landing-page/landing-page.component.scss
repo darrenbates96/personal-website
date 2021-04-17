@@ -25,10 +25,13 @@
 }
 
 .landing-header {
-  span {
-    font-size: 80px;
-    @extend .font-bolder;
-  }
+  font-size: 80px;
+  @extend .font-bolder;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.landing-header:hover {
+  transform: skewX(-15deg);
 }
 
 .landing-emoji {
@@ -49,6 +52,24 @@
 // Animations
 
 @keyframes emoJiggle {
+  0% {
+    font-size: 60px;
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    font-size: 70px;
+  }
+  55% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    font-size: 60px;
+  }
+}
+
+@keyframes letterBounce {
   0% {
     font-size: 60px;
   }

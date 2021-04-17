@@ -10,11 +10,7 @@
   <div class="landing-content">
     <div>
       <h1 *ngFor="let line of text" class="landing-header">
-        <span
-          *ngFor="let letter of line.split('')"
-          (mouseover)="performTextAnimation()"
-          >{{ letter }}</span
-        >
+        {{ line }}
       </h1>
     </div>
     <h1

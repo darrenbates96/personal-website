@@ -26,29 +26,26 @@ span {
   margin: 0;
   padding: 0;
   font-family: "Blinker", sans-serif;
+  font-weight: 500;
   color: #000000;
 }
 
-.paragraph-lighter,
-.paragraph,
-.paragraph-bolder {
-  font-size: 16px;
-}
-.paragraph-lighter {
+.font-lighter {
   font-weight: 400;
 }
-.paragraph {
-  font-weight: 500;
-}
-.paragraph-bolder {
+.font-bolder {
   font-weight: 600;
+}
+
+.paragraph {
+  font-size: 16px;
 }
 
 .background-text {
   font-family: "Staatliches", cursive;
-  font-size: 240px;
-  line-height: 190px;
-  letter-spacing: 40px;
+  line-height: 100%;
+  letter-spacing: 20px;
+  font-size: 20vw;
   text-align: center;
   color: $app-background;
   text-shadow: 0 0 50px $background-text;
@@ -93,4 +90,18 @@ span {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+}
+
+// Predefined Layouts
+
+.center-row-contents {
+  @extend .flex;
+  @extend .justify-center;
+  @extend .align-center;
+}
+
+.center-column-contents {
+  @extend .flex-column;
+  @extend .justify-center;
+  @extend .align-center;
 }

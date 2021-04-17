@@ -5,4 +5,25 @@
     <h1 class="background-text">engineer/&gt;</h1>
   </div>
   <!---->
+
+  <!-- Content -->
+  <div class="landing-content">
+    <h1 class="landing-header">
+      Hi,<br />I'm a software engineer...<br />Let's bring your ideas to life!
+    </h1>
+    <h1
+      class="landing-emoji"
+      [class.landing-emoji-animate]="animateEmoji"
+      (mouseover)="performAnimateEmoji()"
+    >
+      🤘
+    </h1>
+  </div>
+  <!---->
+
+  <!-- Scroll Component -->
+  <div class="landing-scroll-container">
+    <app-scroll></app-scroll>
+  </div>
+  <!---->
 </section>

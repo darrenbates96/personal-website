@@ -9,8 +9,8 @@ import { landingPageText } from 'src/app/core/constants';
 })
 export class LandingPageComponent implements OnInit {
   cursorPosition: CursorPosition = {
-    left: '0px',
-    top: '0px',
+    left: '50%',
+    top: '50%',
   };
 
   text: string[] = [];

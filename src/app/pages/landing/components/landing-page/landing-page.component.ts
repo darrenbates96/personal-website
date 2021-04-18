@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CursorPosition } from 'src/app/core/componentModels';
 import { landingPageText } from 'src/app/core/constants';
 
 @Component({
@@ -7,6 +8,11 @@ import { landingPageText } from 'src/app/core/constants';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent implements OnInit {
+  cursorPosition: CursorPosition = {
+    left: '0px',
+    top: '0px',
+  };
+
   text: string[] = [];
 
   isPageLoading: boolean = true;
@@ -19,6 +25,11 @@ export class LandingPageComponent implements OnInit {
     this.animatePageHelper();
   }
 
+  performCustomCursor($event: MouseEvent) {
+    this.cursorPosition.left = $event.pageX + 'px';
+    this.cursorPosition.top = $event.pageY + 'px';
+  }
+
   performAnimateEmoji() {
     this.animateEmoji = true;
     setTimeout(() => {
@@ -29,6 +40,6 @@ export class LandingPageComponent implements OnInit {
   animatePageHelper() {
     setTimeout(() => {
       this.isPageLoading = false;
-    }, 1000);
+    }, 3000);
   }
 }

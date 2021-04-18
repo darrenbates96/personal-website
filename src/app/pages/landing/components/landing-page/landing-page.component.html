@@ -2,8 +2,9 @@
   <div
     *ngIf="isPageLoading; else showPageContent"
     class="landing-loading-container"
+    (mousemove)="performCustomCursor($event)"
   >
-    <div class="landing-loading-circle"></div>
+    <div class="landing-loading-cursor" [ngStyle]="cursorPosition"></div>
   </div>
 
   <ng-template #showPageContent>

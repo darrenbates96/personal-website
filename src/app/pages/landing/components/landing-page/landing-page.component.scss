@@ -9,17 +9,25 @@
 }
 
 .landing-loading-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  @extend .center-row-contents;
   background-color: #000000;
+  cursor: none;
 }
 
-.landing-loading-circle {
+.landing-loading-cursor {
+  position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #ffffff;
+  animation: loadingBounce 1s infinite;
+}
+
+.landing-lading-text {
+  @extend .paragraph;
+  color: #ffffff;
 }
 
 .landing-background-text-container {
@@ -74,5 +82,17 @@
   }
   100% {
     font-size: 60px;
+  }
+}
+
+@keyframes loadingBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

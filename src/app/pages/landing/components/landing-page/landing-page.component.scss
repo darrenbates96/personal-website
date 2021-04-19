@@ -19,12 +19,16 @@
 
 .landing-loading-cursor {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  @extend .center-contents;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   animation: loadingBounce 1s infinite;
+}
+.landing-animate-cursor {
+  animation: enlargeCursor 1s ease-in-out 1 forwards;
 }
 
 .landing-lading-text {
@@ -96,5 +100,17 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes enlargeCursor {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(100);
   }
 }

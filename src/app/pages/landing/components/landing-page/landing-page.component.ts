@@ -16,13 +16,16 @@ export class LandingPageComponent implements OnInit {
   text: string[] = [];
 
   isPageLoading: boolean = true;
+  animateCursor: boolean = false;
   animateEmoji: boolean = false;
 
   constructor() {}
 
   ngOnInit(): void {
     this.text = landingPageText;
-    this.animatePageHelper();
+    setTimeout(() => {
+      this.animatePageHelper();
+    }, 3000);
   }
 
   performCustomCursor($event: MouseEvent) {
@@ -38,8 +41,9 @@ export class LandingPageComponent implements OnInit {
   }
 
   animatePageHelper() {
+    this.animateCursor = true;
     setTimeout(() => {
-      this.isPageLoading = false;
-    }, 3000);
+      this.animateCursor = false;
+    }, 1000);
   }
 }

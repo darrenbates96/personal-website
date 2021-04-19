@@ -4,7 +4,15 @@
     class="landing-loading-container"
     (mousemove)="performCustomCursor($event)"
   >
-    <div class="landing-loading-cursor" [ngStyle]="cursorPosition"></div>
+    <div
+      class="landing-loading-cursor"
+      [ngStyle]="cursorPosition"
+      [class.landing-animate-cursor]="animateCursor"
+    >
+      <p *ngIf="!animateCursor" class="secondary-font font-bolder">
+        LOADING...
+      </p>
+    </div>
   </div>
 
   <ng-template #showPageContent>

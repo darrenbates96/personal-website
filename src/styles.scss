@@ -41,8 +41,12 @@ span {
   font-size: 16px;
 }
 
-.background-text {
+.secondary-font {
   font-family: "Staatliches", cursive;
+}
+
+.background-text {
+  @extend .secondary-font;
   line-height: 100%;
   letter-spacing: 20px;
   font-size: 20vw;
@@ -94,7 +98,7 @@ span {
 
 // Predefined Layouts
 
-.center-row-contents {
+.center-contents {
   @extend .flex;
   @extend .justify-center;
   @extend .align-center;
@@ -104,4 +108,23 @@ span {
   @extend .flex-column;
   @extend .justify-center;
   @extend .align-center;
+}
+
+// Animations
+
+.fade-in {
+  animation: fadeIn 0.3s 1 forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+    transform: rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+    transform: rotate(0deg);
+  }
 }

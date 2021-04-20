@@ -1,31 +1,45 @@
 <section class="landing-container">
-  <!-- Background Text -->
-  <div class="landing-background-text-container">
-    <h1 class="background-text">&lt;software</h1>
-    <h1 class="background-text">engineer/&gt;</h1>
-  </div>
-  <!---->
-
-  <!-- Content -->
-  <div class="landing-content">
-    <div>
-      <h1 *ngFor="let line of text" class="landing-header">
-        {{ line }}
-      </h1>
-    </div>
-    <h1
-      class="landing-emoji"
-      [class.landing-emoji-animate]="animateEmoji"
-      (mouseover)="performAnimateEmoji()"
+  <div
+    *ngIf="isPageLoading; else showPageContent"
+    class="landing-loading-container"
+    (mousemove)="performCustomCursor($event)"
+  >
+    <div
+      class="landing-loading-cursor"
+      [ngStyle]="cursorPosition"
+      [class.landing-animate-cursor]="animateCursor"
     >
-      🤘
-    </h1>
+      <p *ngIf="!animateCursor" class="secondary-font font-bolder">
+        LOADING...
+      </p>
+    </div>
   </div>
-  <!---->
 
-  <!-- Scroll Component -->
-  <div class="landing-scroll-container">
-    <app-scroll></app-scroll>
-  </div>
-  <!---->
+  <ng-template #showPageContent>
+    <!-- Background Text -->
+    <div class="landing-background-text-container">
+      <h1 class="background-text">&lt;software</h1>
+      <h1 class="background-text">engineer/&gt;</h1>
+    </div>
+    <!---->
+
+    <!-- Content -->
+    <div class="landing-content">
+      <div class="fade-in">
+        <div>
+          <h1 *ngFor="let line of text" class="landing-header">
+            {{ line }}
+          </h1>
+        </div>
+        <h1
+          class="landing-emoji"
+          [class.landing-emoji-animate]="animateEmoji"
+          (mouseover)="performAnimateEmoji()"
+        >
+          🤘
+        </h1>
+      </div>
+    </div>
+    <!---->
+  </ng-template>
 </section>

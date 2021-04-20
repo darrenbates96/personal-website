@@ -8,10 +8,7 @@ import { landingPageText } from 'src/app/core/constants';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent implements OnInit {
-  cursorPosition: CursorPosition = {
-    left: '50%',
-    top: '50%',
-  };
+  cursorPosition: CursorPosition = new CursorPosition();
 
   text: string[] = [];
 
@@ -23,6 +20,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.text = landingPageText;
+    // TODO: Figure out amount of time to "load"
     setTimeout(() => {
       this.animatePageHelper();
     }, 3000);

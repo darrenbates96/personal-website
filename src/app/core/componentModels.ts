@@ -1,4 +1,4 @@
-export interface CursorPosition {
-  left: string;
-  top: string;
+export class CursorPosition {
+  left: string = '50%';
+  top: string = '50%';
 }

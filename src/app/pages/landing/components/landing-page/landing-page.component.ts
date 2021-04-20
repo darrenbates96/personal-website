@@ -43,7 +43,8 @@ export class LandingPageComponent implements OnInit {
   animatePageHelper() {
     this.animateCursor = true;
     setTimeout(() => {
+      this.isPageLoading = false;
       this.animateCursor = false;
-    }, 1000);
+    }, 600);
   }
 }

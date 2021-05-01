@@ -2,7 +2,6 @@
 @import "src/variables.scss";
 
 .landing-container {
-  position: relative;
   width: 100%;
   height: 100%;
   background-color: $app-background;
@@ -31,16 +30,10 @@
   animation: enlargeCursor 1s ease-in-out 1 forwards;
 }
 
-.landing-lading-text {
-  @extend .paragraph;
-  color: #ffffff;
-}
-
 .landing-background-text-container {
   width: 100%;
   height: 100%;
   @extend .center-column-contents;
-  overflow: hidden;
 }
 
 .landing-content {

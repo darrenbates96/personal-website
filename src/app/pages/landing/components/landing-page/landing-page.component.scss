@@ -78,6 +78,13 @@
   animation: emoJiggle 0.8s ease-in-out 1 forwards;
 }
 
+.landing-scroll-container {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  @extend .center-column-contents;
+}
+
 // Animations
 
 @keyframes emoJiggle {

@@ -30,6 +30,11 @@
   animation: enlargeCursor 1s ease-in-out 1 forwards;
 }
 
+.landing-loading-text {
+  @extend .secondary-font;
+  @extend .font-bolder;
+}
+
 .landing-background-text-container {
   width: 100%;
   height: 100%;

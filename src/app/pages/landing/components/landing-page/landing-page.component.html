@@ -1,4 +1,5 @@
 <section class="landing-container">
+  <!-- Loading -->
   <div
     *ngIf="isPageLoading; else showPageContent"
     class="landing-loading-container"
@@ -9,12 +10,12 @@
       [ngStyle]="cursorPosition"
       [class.landing-animate-cursor]="animateCursor"
     >
-      <p *ngIf="!animateCursor" class="secondary-font font-bolder">
-        LOADING...
-      </p>
+      <p *ngIf="!animateCursor" class="landing-loading-text">LOADING...</p>
     </div>
   </div>
+  <!---->
 
+  <!-- Content -->
   <ng-template #showPageContent>
     <!-- Background Text -->
     <div class="landing-background-text-container">
@@ -23,23 +24,28 @@
     </div>
     <!---->
 
-    <!-- Content -->
     <div class="landing-content">
-      <div class="fade-in">
-        <div>
-          <h1 *ngFor="let line of text" class="landing-header">
-            {{ line }}
+      <!-- Greeting-->
+      <div class="landing-greeting">
+        <div class="fade-in">
+          <div>
+            <h1 *ngFor="let line of text" class="landing-header">
+              {{ line }}
+            </h1>
+          </div>
+          <h1
+            class="landing-emoji"
+            [class.landing-emoji-animate]="animateEmoji"
+            (mouseover)="performAnimateEmoji()"
+          >
+            🤘
           </h1>
         </div>
-        <h1
-          class="landing-emoji"
-          [class.landing-emoji-animate]="animateEmoji"
-          (mouseover)="performAnimateEmoji()"
-        >
-          🤘
-        </h1>
+        <div class="landing-scroll-container">
+          <app-scroll></app-scroll>
+        </div>
       </div>
+      <!---->
     </div>
-    <!---->
   </ng-template>
 </section>

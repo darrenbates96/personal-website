@@ -2,7 +2,6 @@
 @import "src/variables.scss";
 
 .landing-container {
-  position: relative;
   width: 100%;
   height: 100%;
   background-color: $app-background;
@@ -31,22 +30,27 @@
   animation: enlargeCursor 1s ease-in-out 1 forwards;
 }
 
-.landing-lading-text {
-  @extend .paragraph;
-  color: #ffffff;
+.landing-loading-text {
+  @extend .secondary-font;
+  @extend .font-bolder;
 }
 
 .landing-background-text-container {
   width: 100%;
   height: 100%;
   @extend .center-column-contents;
-  overflow: hidden;
 }
 
 .landing-content {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.landing-greeting {
   width: 100%;
   height: 100%;
   @extend .center-column-contents;
@@ -70,6 +74,13 @@
 }
 .landing-emoji-animate {
   animation: emoJiggle 0.8s ease-in-out 1 forwards;
+}
+
+.landing-scroll-container {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  @extend .center-column-contents;
 }
 
 // Animations

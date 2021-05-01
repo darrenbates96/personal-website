@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .scroll-container {
   width: 35.03px;
   height: 51px;
@@ -20,7 +22,9 @@
   animation: dropFade 7s infinite;
 }
 
-.paragraph-lighter {
+.scroll-paragraph {
+  @extend .paragraph;
+  @extend .font-bolder;
   display: inline-block;
   animation: textFade 7s infinite;
 }

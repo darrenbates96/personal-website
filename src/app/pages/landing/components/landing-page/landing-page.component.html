@@ -26,7 +26,7 @@
 
     <div class="landing-content">
       <!-- Greeting-->
-      <div class="landing-greeting">
+      <section class="landing-greeting">
         <div class="fade-in">
           <div>
             <h1 *ngFor="let line of text" class="landing-header">
@@ -44,7 +44,11 @@
         <div class="landing-scroll-container">
           <app-scroll></app-scroll>
         </div>
-      </div>
+      </section>
+      <!---->
+
+      <!-- About -->
+      <section class="landing-about-container"></section>
       <!---->
     </div>
   </ng-template>

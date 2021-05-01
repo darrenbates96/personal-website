@@ -25,19 +25,21 @@
 
     <!-- Content -->
     <div class="landing-content">
-      <div class="fade-in">
-        <div>
-          <h1 *ngFor="let line of text" class="landing-header">
-            {{ line }}
+      <div class="landing-greeting">
+        <div class="fade-in">
+          <div>
+            <h1 *ngFor="let line of text" class="landing-header">
+              {{ line }}
+            </h1>
+          </div>
+          <h1
+            class="landing-emoji"
+            [class.landing-emoji-animate]="animateEmoji"
+            (mouseover)="performAnimateEmoji()"
+          >
+            🤘
           </h1>
         </div>
-        <h1
-          class="landing-emoji"
-          [class.landing-emoji-animate]="animateEmoji"
-          (mouseover)="performAnimateEmoji()"
-        >
-          🤘
-        </h1>
       </div>
     </div>
     <!---->

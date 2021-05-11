@@ -6,9 +6,10 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 
 import { LandingRoutingModule } from './landing-routing.module';
 import { ScrollModule } from 'src/app/shared/scroll/scroll.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
-  declarations: [LandingComponent, LandingPageComponent],
+  declarations: [LandingComponent, LandingPageComponent, AboutComponent],
   imports: [CommonModule, LandingRoutingModule, ScrollModule],
 })
 export class LandingModule {}

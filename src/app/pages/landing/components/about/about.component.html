@@ -1,5 +1,9 @@
 <section class="about-container">
-  <h1 *ngFor="let line of text" class="about-header-text">
-    {{ line }}
-  </h1>
+  <div class="about-content-left">
+    <p *ngFor="let lineSegment of text" class="about-text">
+      {{ lineSegment[0] }} <span>{{ lineSegment[1] }}</span>
+      {{ lineSegment[2] }}
+    </p>
+  </div>
+  <div class="about-content-right"></div>
 </section>

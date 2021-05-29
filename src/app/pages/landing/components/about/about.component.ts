@@ -7,7 +7,7 @@ import { aboutComponentText } from 'src/app/core/constants';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  text: string[] = aboutComponentText;
+  text: [string][][] = aboutComponentText;
 
   constructor() {}
 

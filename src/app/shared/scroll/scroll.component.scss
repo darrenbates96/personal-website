@@ -19,14 +19,14 @@
   border-radius: 50%;
   margin: 4px auto;
   background-color: #000000;
-  animation: dropFade 7s infinite;
+  animation: dropFade 6s infinite;
 }
 
 .scroll-paragraph {
   @extend .paragraph;
   @extend .font-bolder;
   display: inline-block;
-  animation: textFade 7s infinite;
+  animation: textFade 6s infinite;
 }
 
 // Animations
